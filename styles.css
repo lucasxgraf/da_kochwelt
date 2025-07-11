@@ -1,0 +1,625 @@
+/* GLOABAL */
+
+/* raleway-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/raleway-v34-latin-regular.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* raleway-500 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  src: url('fonts/raleway-v34-latin-500.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* raleway-600 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/raleway-v34-latin-600.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* raleway-700 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/raleway-v34-latin-700.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* Globale Klassen */
+
+.global_layout_vertical {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: start;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: start;
+}
+
+button {
+  border: none;
+  color: white;
+  background-color: #008000;
+  padding: 8px 48px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+p {
+  text-align: justify;
+  hyphens: auto;
+}
+
+.creator_img {
+  width: 72px;
+  border-radius: 50%;
+}
+
+.image {
+  max-width: 250px;
+  max-height: 250px;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.image_no_hover {
+  max-width: 250px;
+  max-height: 250px;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.limits {
+  max-width: 1440px;
+  /*=> Maximale Breite vom HTLM-Element*/
+  margin: auto;
+  /*=> Abstand links und rechts gleich*/
+}
+
+.flexbox_limits {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flexbox_limits_evenly {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.d_none {
+  display: none;
+}
+
+/* Header */
+header {
+  box-shadow: 0px 0.5px 4px 0.5px lightgray;
+  padding: 0 24px 0 24px;
+  position: sticky;
+  /* fixer Header */
+  top: 0;
+  background-color: white;
+  z-index: 10;
+  right: 0;
+  left: 0;
+}
+
+header img {
+  width: 200px;
+}
+
+nav {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.header_icon {
+  display: flex;
+  align-items: center;
+}
+
+.nav_focus {
+  color: #008000;
+  font-weight: bolder;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 0px;
+  position: relative;
+}
+
+nav a:hover {
+  color: #008000;
+}
+
+nav a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 50%;
+  position: absolute;
+  background: #008000;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  color: #008000;
+}
+
+nav a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+#resp_menu {
+  display: none;
+  text-align: center;
+}
+
+#resp_button {
+  display: none;
+}
+
+/* Footer */
+footer {
+  background-color: #403B3B;
+  bottom: 0;
+  padding: 24px;
+  font-size: 16px;
+}
+
+.footer_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_logo {
+  /* height: 60px; */
+  width: 200px;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+footer li {
+  list-style-type: none;
+  color: white;
+  line-height: 28px;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer_icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 16px;
+  height: 60px;
+}
+
+/* footer img{
+  
+} */
+
+/* Startseite ---------------------------------------------------------------------------------- */
+
+/* Section 1 - Rezept des Tages (recipe of the day = rotd)*/
+.recipe_preview {
+  padding: 40px 24px;
+}
+
+.preview_gap {
+  gap: 16px;
+}
+
+.recipe_preview button {
+  width: 200px;
+}
+
+.recipe_preview p {
+  margin: 0;
+  flex-grow: 1;
+}
+
+.recipe_preview h1 {
+  margin-top: 0px;
+  text-align: start;
+}
+
+.recipe_preview img {
+  height: 250px;
+  border-radius: 5%;
+  object-fit: cover;
+}
+
+.recipe_box_right {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  border: none;
+  color: white;
+  background-color: #008000;
+  padding: 8px 48px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  width: 150px;
+}
+
+/* Section 2 - Lust auf was Neues (desire for something new)*/
+.desire_new {
+  background-color: lightgray;
+  padding: 16px 24px 32px 24px;
+}
+
+.desire_new_content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.desire_new_text {
+  margin-top: 0;
+  text-align: center;
+}
+
+/* Section 3 - Wissenswertes: Grobkörniges Meersalz oder raffiniertes Speisesalz? (worth knowing)*/
+.worth_knowing {
+  padding: 0px 24px 40px;
+}
+
+.worth_knowing_content {
+  display: flex;
+  flex-grow: 3, 1;
+}
+
+.worth_knowing_text {
+  padding-right: 32px;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Layout für vertikale Bildschirme */
+.recipe_preview,
+.worth_knowing {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Impressum ---------------------------------------------------------------------------------- */
+.impressum_infos {
+  padding: 0 24px 24px 24px;
+}
+
+/* Bilder Hover */
+.image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Media Queries ----------------------------------------------------------------------------- */
+
+@media (max-width:860px) {
+
+  /* Section 2 - Lust auf was Neues (desire for something new)*/
+
+  .desire_new_content {
+    align-items: center;
+    gap: 19px;
+    justify-content: space-evenly;
+  }
+
+  /* Footer */
+
+  footer {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 690px) {
+
+  /* Resp-button - Eingefügt von Tizian 24.05.25 */
+
+  nav {
+    display: none;
+  }
+
+
+  #resp_button {
+    display: block;
+    height: 48px;
+    width: 52px;
+    margin-left: auto;
+    position: relative;
+    align-self: center;
+    background-color: #008000;
+  }
+
+  #resp_button.active {
+    width: 188px;
+    right: 0;
+    margin-right: 0;
+  }
+
+  #resp_button span {
+    height: 2px;
+    width: 24px;
+    background-color: white;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.1s ease;
+  }
+
+  .burger_line_one {
+    top: 30%;
+  }
+
+  .burger_line_two {
+    top: 50%;
+  }
+
+  .burger_line_three {
+    top: 70%;
+  }
+
+  #resp_button.active .burger_line_one {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 32px;
+  }
+
+  #resp_button.active .burger_line_two {
+    opacity: 0;
+  }
+
+  #resp_button.active .burger_line_three {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 32px;
+  }
+
+  #resp_menu {
+    display: flex;
+  }
+
+  .resp_menu_box {
+    display: flex;
+    flex-direction: column;
+    background-color: #008000;
+    color: white;
+    width: 156px;
+    padding: 16px;
+    gap: 16px;
+    position: absolute;
+    top: 52px;
+    right: 24px;
+    transition: all 100ms ease-in-out;
+    z-index: 11;
+  }
+
+  .resp_menu_closed {
+    transform: translateX(100%);
+    right: 0;
+    position: fixed;
+  }
+
+  .resp_menu_box a {
+    color: white;
+    text-decoration: none;
+  }
+
+
+
+  /* Section 1 - Rezept des Tages (recipe of the day = rotd)*/
+  .flex_media {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .recipe_preview img {
+    max-width: 250px;
+    max-height: 250px;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    object-fit: cover;
+    align-items: center;
+  }
+
+  .recipe_box_right a {
+    margin-top: 16px;
+  }
+
+  .recipe_box_right {
+    align-items: center;
+  }
+
+
+
+  /* Section 3 - Wissenswertes: Grobkörniges Meersalz oder raffiniertes Speisesalz? (worth knowing)*/
+
+  .worth_knowing_content {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+  }
+
+  .worth_knowing_text {
+    padding: 0;
+  }
+
+  /* Footer */
+
+  .footer_content {
+    flex-direction: column;
+  }
+
+  .footer_icons {
+    gap: 38px;
+    padding: 16px;
+  }
+
+  Footer li {
+    padding-top: 8px;
+  }
+
+  .impressum_infos p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    display: none;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  #resp_button {
+    height: 40px;
+  }
+
+  #resp_button span {
+    height: 2px;
+    width: 40%;
+    background-color: white;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.75s ease;
+  }
+
+  .burger_line_one {
+    top: 30%;
+  }
+
+  .burger_line_two {
+    top: 50%;
+  }
+
+  .burger_line_three {
+    top: 70%;
+  }
+
+
+  #resp_button.active .burger_line_one {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  #resp_button.active .burger_line_two {
+    opacity: 0;
+  }
+
+  #resp_button.active .burger_line_three {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .resp_menu_box {
+    top: 44px;
+  }
+
+  header img {
+    width: 148px;
+  }
+
+  .footer_logo {
+    width: 148px;
+  }
+
+}
+
+@media(max-width: 420px) {
+
+  #resp_menu {
+    top: 40px;
+    width: 104px;
+    padding: 8px;
+  }
+
+  #resp_button.active {
+    width: 120px;
+  }
+
+}

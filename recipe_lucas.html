@@ -1,0 +1,253 @@
+<!-- Lucas -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kochwelt | Lasagne</title>
+
+    <link rel="icon" href="./img/logo_small.png">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles_recipe.css">
+</head>
+<body>
+    <div class="global_layout_vertical">
+        <header>
+            <div class="limits flexbox_limits">
+                <div class="header_icon">
+                    <a href="index.html">
+                        <img src="./img/logo.png" alt="Logo Kochwelt" />
+                    </a>
+                </div>
+                <nav>
+                    <a href="./index.html">Start</a>
+                    <a href="./rotd.html">Rezept des Tages</a>
+                    <a href="./kontakt.html">Kontakt</a>
+                    <a href="./impressum.html">Impressum</a>
+                </nav>
+                <div id="resp_button" onclick="toggleRespMenu()">
+                    <span class="burger_line_one"></span>
+                    <span class="burger_line_two"></span>
+                    <span class="burger_line_three"></span>
+                </div>
+            </div>
+        </header>
+        <div id="resp_menu" class="resp_menu_box resp_menu_closed">
+            <a href="./index.html">Start</a>
+            <a href="./rotd.html">Rezept des Tages</a>
+            <a href="./kontakt.html">Kontakt</a>
+            <a href="./impressum.html">Impressum</a>
+        </div>
+
+    <div class="limits flexbox_limits_column">
+        <!-- Sektion 1 - Überschrift, Bild, Kurze Infozeile -->
+        <section>
+            <h1 class="text_align_left recipe_h1">Lasagne</h1>
+            <img class="recipe_img" src="./img/lasagne.jpg" alt="Bild von einer Lasagne">
+            <div class="recipe_info">
+                <div class="recipe_info_box">
+                    <img src="./img/icons/clock-regular.svg" alt="Icon von einer Uhr">
+                    <span>120 Min</span>
+                </div>
+                <div class="recipe_info_box">
+                    <img src="./img/icons/brain-solid.svg" alt="Icon von einem Gehirn">
+                    <span>Mittel</span>
+                </div>            
+                <div class="recipe_info_box">
+                    <img src="./img/icons/calendar-alt-regular.svg" alt="Icon von einem Kalender">
+                    <span>10.05.2025</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sektion 2 - Portionen, Zutaten -->
+        <section>
+            <div class="separator"></div>
+            <div class="hidden_container">
+                <div id="warning" class="notice"></div>
+            </div>
+            <div class="number_of_portions">
+                <p>Zutaten für</p>
+                <div class="portion_inputs">
+                    <input id="portions_value" type="number" value="4" min="1" max="20">
+                    <button onclick="getAmountIngredients()">Portionen</button>    
+                </div>
+            </div>
+            <p id="validate_portions"></p>
+
+            <table class="recipe_table">
+                <tr class="recipe_table_color">
+                    <td>200</td>
+                    <td>g</td>
+                    <td class="small_space">Lasagneplatten</td>
+                </tr>
+                <tr>
+                    <td>150</td>
+                    <td>g</td>
+                    <td class="small_space">Geriebener Mozzarella</td>
+                </tr>
+                <tr class="recipe_table_color">
+                    <td>50</td>
+                    <td>g</td>
+                    <td class="small_space">Geriebener Parmesan</td>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>g</td>
+                    <td class="small_space">Hackfleisch (Rind oder Mischung aus Rind und Schwein)</td>
+                </tr>
+                <tr class="recipe_table_color">
+                    <td>1</td>
+                    <td></td>
+                    <td class="small_space">große Zwiebel, fein gehackt</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td class="small_space">Knoblauchzehen, fein gehackt</td>
+                </tr>
+                <tr class="recipe_table_color">
+                    <td>800</td>
+                    <td>g</td>
+                    <td class="small_space">gehackte Tomaten</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>EL</td>
+                    <td class="small_space">Tomatenmark</td>
+                </tr>
+                <tr class="recipe_table_color">
+                    <td>2</td>
+                    <td>TL</td>
+                    <td class="small_space">getrockneter Oregano</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>TL</td>
+                    <td class="small_space">getrocknetes Basilikum</td>
+                </tr>
+                <tr class="recipe_table_color">
+                    <td>2</td>
+                    <td>EL</td>
+                    <td class="small_space">Olivenöl</td>
+                </tr>
+                <tr>
+                    <td class="d_none"></td>
+                    <td class="d_none"></td>
+                    <td>Salz und Pfeffer, nach Geschmack</td>
+                </tr>
+            </table>
+            <div>
+                <p><strong>Für die Béchamel Sauce</strong></p>
+            </div>
+
+            <table class="recipe_table">
+                <tr class="recipe_table_color">
+                    <td>50</td>
+                    <td>g</td>
+                    <td class="small_space">Butter</td>
+                </tr>
+                <tr>
+                    <td>50</td>
+                    <td>g</td>
+                    <td class="small_space">Mehl</td>
+                </tr>
+                <tr class="recipe_table_color">
+                    <td>500</td>
+                    <td>ml</td>
+                    <td class="small_space">Milch</td>
+                </tr>
+                <tr>
+                    <td class="d_none"></td>
+                    <td class="d_none"></td>
+                    <td>Eine Prise Muskatnuss</td>
+                </tr>
+                <tr class="recipe_table_color">
+                    <td class="d_none"></td>
+                    <td class="d_none"></td>
+                    <td>Salz, nach Geschmack</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Sektion 3 - Zubereitung -->
+        <section>
+            <h2>Zubereitung</h2>
+            <div class="recipe_info">
+                <div class="recipe_info_box">
+                    <img src="./img/icons/clock-regular.svg" alt="Icon von einer Uhr">
+                    <div>ca. 45 Minuten</div>
+                </div>
+                <div class="recipe_info_box">
+                    <img src="./img/icons/clock-regular.svg" alt="Icon von einer Uhr">
+                    <div>Gesamtzeit ca. 120 Minuten</div>
+                </div>
+            </div>
+            <p> 
+                Für die Fleischsoße das Olivenöl in einer großen Pfanne bei mittlerer Hitze erhitzen.
+                Die fein gehackte Zwiebel dazugeben und etwa 3–4 Minuten anschwitzen, bis sie glasig ist.
+                Anschließend den Knoblauch hinzufügen und eine weitere Minute mitbraten, bis er duftet. 
+                Das Hackfleisch hinzufügen und unter Rühren anbraten, bis es gleichmäßig braun ist. 
+                Dabei das Fleisch mit einem Kochlöffel zerkleinern. 
+                Das Tomatenmark einrühren und kurz anschwitzen. 
+                Nun die gehackten Tomaten, Oregano, Basilikum, Salz und Pfeffer hinzugeben. 
+                Alles gut verrühren und die Soße bei gelegentlichem Umrühren etwa 20–30 Minuten köcheln lassen, bis sie eine sämige Konsistenz hat.
+                <br><br>
+                Während die Fleischsoße köchelt, die Béchamelsauce zubereiten. 
+                Dazu die Butter in einem Topf bei mittlerer Hitze schmelzen lassen. 
+                Das Mehl hinzugeben und unter ständigem Rühren 1–2 Minuten anschwitzen, bis eine helle Mehlschwitze entsteht. 
+                Nach und nach die Milch unter Rühren zugießen, dabei darauf achten, dass keine Klümpchen entstehen. 
+                Die Sauce unter Rühren aufkochen lassen, bis sie eindickt. Mit einer Prise Muskatnuss und etwas Salz abschmecken, dann vom Herd nehmen.
+                <br><br>
+                Den Backofen auf 180 °C (Ober-/Unterhitze) vorheizen. 
+                Eine Auflaufform leicht einfetten und eine dünne Schicht Fleischsoße auf dem Boden verteilen. 
+                Eine Lage Lasagneplatten darauflegen und mit einer Schicht Béchamelsauce und einer weiteren Schicht Fleischsoße bedecken. 
+                Diesen Vorgang (Lasagneplatten, Béchamel, Fleischsoße) wiederholen, bis die Form gefüllt ist. 
+                Die letzte Schicht sollte Béchamelsauce sein. Zum Abschluss den geriebenen Mozzarella und Parmesan darüberstreuen.
+                <br><br>
+                Die Auflaufform mit Alufolie abdecken und die Lasagne im vorgeheizten Ofen etwa 25 Minuten backen. 
+                Danach die Folie entfernen und weitere 15–20 Minuten backen, bis der Käse goldbraun und leicht gebräunt ist.
+                <br><br>          
+                Vor dem Servieren die Lasagne kurz abkühlen lassen, damit sich die Schichten setzen können.
+                <br><br>
+                <strong>Tipp:</strong> Die Lasagne schmeckt am nächsten Tag oft noch besser, da die Aromen durchgezogen sind!
+            </p>
+        </section>
+
+        <!-- Sektion 4 - Rezept erstellt von -->
+        <section>
+            <h3>Rezept erstellt von</h3>
+            <div class="creator">
+                <img class="creator_img" src="./img/profile_lucas.jpg" alt="Bild von dem Ersteller Lucas">
+                <p>Lucas</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="limits footer_content">
+            <img class="footer_logo" src="./img/logo_white.png" alt="Logo Kochwelt">
+            
+            <ul>
+                <li> 
+                    Fotos von: <br>
+                    <a href="https://pixabay.com/users/michwich-36808266/" target="_blank">Mich Wich</a>
+                    - <a href="https://pixabay.com/de/users/romjanaly-19799828/" target="_blank">Romjan Aly</a> <br>
+                    <a href="https://pixabay.com/de/users/moiranazzari-7402443/" target="_blank">Moira Nazzari</a>
+                    - <a href="https://pixabay.com/de/users/topi_pigula-4759077/" target="_blank">Topi Pigula</a>
+                </li>
+                
+                <li>© 2025 Kochwelt</li>
+            </ul>
+
+            <div class="footer_icons">            
+                <a href="https://de-de.facebook.com/" target="_blank"><img src="./img/icons/facebook.svg" alt="facebook-icon"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="./img/icons/instagram.svg" alt="instagram-icon"></a>
+                <a href="https://x.com/" target="_blank"><img src="./img/icons/x.svg" alt="x-icon"></a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+<script src="./script.js"></script>
+</html>

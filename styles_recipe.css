@@ -1,0 +1,159 @@
+/* Rezeptseiten --------------------------------------------------------------------------*/
+.flexbox_limits_column{
+  display: flex;
+  flex-direction: column;
+  padding: 24px 24px;
+}
+
+/* Sektion 1 - Überschrift, Bild, Kurze Infozeile */
+
+.text_align_left{
+    text-align: start;
+}
+
+.recipe_h1{
+  font-size: 24px;
+  font-weight: 700;
+  text-align: start; 
+}
+
+.portion_inputs{
+    display: flex;
+}
+
+.recipe_img{
+    height: 160px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 24px;
+}
+
+.recipe_info{
+    display: flex;
+    gap: 16px;
+    justify-content: start;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.recipe_info img{
+    height: 14px;
+}
+
+.recipe_info_box{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    background-color: lightgrey;
+    border-radius: 10px;
+    padding: 4px 10px 4px 10px;
+}
+
+/*Sektion 2 - Portionen, Zutaten*/
+
+.separator{
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    margin-top: 40px;
+    color: lightgrey;
+}
+
+.hidden_container{
+    position: relative; 
+    width: 0; 
+    height: 0;
+}
+
+.notice{
+    display: none;
+    position: relative;
+    top: -30px;
+    left: 50px;
+    padding: 6px 0px 6px 0px;
+    width: 200px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: lightgrey;
+    background-color:white;
+    font-size: 10px;
+    text-align: center;
+    color: red;
+}
+
+.number_of_portions{
+    display: flex;
+    align-items: center;
+    margin: 8px 0px;
+}
+
+.number_of_portions p{
+    margin: 0px;
+}
+
+.number_of_portions input{
+    height: 30px;
+    width: 100px;
+    margin-left: 8px;
+    border-color: lightgray;
+    border-width: 1px;
+    border-radius: 10px 0px 0px 10px;
+    padding-inline: 6px;
+    border-style: solid;
+}
+
+.recipe_table{
+    width:100%;
+}
+
+.recipe_table tr{
+    display:flex;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+.recipe_table td{
+    border-spacing: 0;
+}
+
+.recipe_table_color{
+    background-color: lightgray;
+}
+
+.small_space{
+  padding-left: 5px;
+}
+
+/* Sektion 3 und 4 - Rezept erstellt von*/
+.creator{
+    display: flex;
+    align-items: center;
+}
+
+.creator p{
+    margin-left: 16px;
+}
+
+@media (max-width: 480px) {
+
+.portion_inputs input{
+    max-width: 70px;
+}
+
+.recipe_h1{
+    font-size: 20px;
+    text-align: center;
+}
+
+.recipe_info{
+    justify-content: center;
+}
+
+.number_of_portions {
+flex-wrap: wrap;
+gap: 16px;
+justify-content: center;
+}
+
+
+}

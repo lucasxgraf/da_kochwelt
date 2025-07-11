@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kochwelt | Parmigiana</title>
+
+    <link rel="icon" href="./img/logo_small.png">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles_recipe.css">
+</head>
+
+<main>
+    <div class="global_layout_vertical">
+        <header>
+            <div class="limits flexbox_limits">
+                <div class="header_icon">
+                    <a href="index.html">
+                        <img src="./img/logo.png" alt="Logo Kochwelt" />
+                    </a>
+                </div>
+                <nav>
+                    <a href="./index.html">Start</a>
+                    <a href="./rotd.html">Rezept des Tages</a>
+                    <a href="./kontakt.html">Kontakt</a>
+                    <a href="./impressum.html">Impressum</a>
+                </nav>
+                <div id="resp_button" onclick="toggleRespMenu()">
+                    <span class="burger_line_one"></span>
+                    <span class="burger_line_two"></span>
+                    <span class="burger_line_three"></span>
+                </div>
+            </div>
+        </header>
+        <div id="resp_menu" class="resp_menu_box resp_menu_closed">
+            <a href="./index.html">Start</a>
+            <a href="./rotd.html">Rezept des Tages</a>
+            <a href="./kontakt.html">Kontakt</a>
+            <a href="./impressum.html">Impressum</a>
+        </div>
+   
+    <div class="limits flexbox_limits_column">
+        <!-- Sektion 1 - Überschrift, Bild, Kurze Infozeile -->
+        <section>
+            <h1 class="text_align_left recipe_h1">Parmigiana</h1>
+            <img class="recipe_img" src="./img/parmigiana.jpg"" alt="Bild von einer Parmigiana">
+            <div class=" recipe_info">
+            <div class="recipe_info_box">
+                <img src="./img/icons/clock-regular.svg" alt="Icon von einer Uhr">
+                <span>85 Min</span>
+            </div>
+            <div class="recipe_info_box">
+                <img src="./img/icons/brain-solid.svg" alt="Icon von einem Gehirn">
+                <span>Mittel</span>
+            </div>
+            <div class="recipe_info_box">
+                <img src="./img/icons/calendar-alt-regular.svg" alt="Icon von einem Kalender">
+                <span>15.05.2025</span>
+            </div>
+    </div>
+    </section>
+
+    <!-- Sektion 2 - Portionen, Zutaten -->
+    <section>
+        <div class="separator"></div>
+        <div class="hidden_container">
+            <div id="warning" class="notice"></div>
+        </div>
+        <div class="number_of_portions">
+            <p>Zutaten für</p>
+            <div class="portion_inputs">
+                <input id="portions_value" type="number" value="4" min="1" max="20">
+                <button onclick="getAmountIngredients()">Portionen</button>  
+            </div>
+        </div>
+        <p id="validate_portions"></p>
+
+        <table class="recipe_table">
+            <tr class="recipe_table_color">
+                <td>2</td>
+                <td class="d_none"></td>
+                <td class="small_space">Aubergine(n)</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class="d_none"></td>
+                <td>Zwiebel(n)</td>
+            </tr>
+            <tr class="recipe_table_color">
+                <td>2</td>
+                <td class="d_none"></td>
+                <td class="small_space">Knoblauchzehe(n)</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>EL</td>
+                <td class="small_space">Tomatenmark</td>
+            </tr>
+            <tr class="recipe_table_color">
+                <td class="d_none"></td>
+                <td class="d_none"></td>
+                <td class="small_space">frisch gemahlener Pfeffer</td>
+            </tr>
+            <tr>
+                <td>60</td>
+                <td>g</td>
+                <td class="small_space">Mehl</td>
+            </tr>
+            <tr class="recipe_table_color">
+                <td>60</td>
+                <td>ml</td>
+                <td class="small_space">Olivenöl + 2 El zum Braten</td>
+            </tr>
+            <tr>
+                <td>250</td>
+                <td>g</td>
+                <td class="small_space">Mozzarella</td>
+            </tr>
+            <tr class="recipe_table_color">
+                <td>8</td>
+                <td class="d_none"></td>
+                <td class="small_space">Basilikumblätter</td>
+            </tr>
+            <tr>
+                <td class="d_none"></td>
+                <td class="d_none"></td>
+                <td>Olivenöl für die Form</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Sektion 3 - Zubereitung -->
+    <section>
+        <h2>Zubereitung</h2>
+        <div class="recipe_info">
+            <div class="recipe_info_box">
+                <img src="./img/icons/clock-regular.svg" alt="Icon von einer Uhr">
+                <div>ca. 85 Minuten</div>
+            </div>
+            <div class="recipe_info_box">
+                <img src="./img/icons/clock-regular.svg" alt="Icon von einer Uhr">
+                <div>Gesamtzeit ca. 120 Minuten</div>
+            </div>
+        </div>
+        <p>
+            Die Auberginen waschen, abtropfen lassen, putzen und in 1 cm dicke Scheiben
+            schneiden. Auf Küchenpapier ausbreiten, rundum salzen und ca. 20 Minuten ziehen lassen.
+            <br>
+            Zwiebel und Knoblauch abziehen und die Zwiebel sowie die Hälfte der Knoblauchzehen fein würfeln. Das
+            Olivenöl in einem großen Topf erhitzen, Zwiebel und Knoblauchwürfel zugeben und 3-4 Minuten andünsten.
+            Tomatenmark zugeben, 1-2 Minuten anschwitzen und mit stückigen Tomaten ablöschen. Die Tomatensoße mit Salz
+            und Pfeffer abschmecken und 10 Minuten bei mittlerer Hitze köcheln lassen.
+            <br>
+            In der Zwischenzeit die Auberginenscheiben ausdrücken und trocken tupfen. Mehl in einen Teller oder in eine
+            Schüssel geben und die Auberginenscheiben darin wenden. Das restliche Olivenöl in einer Pfanne erhitzen und
+            die Aubergine darin nacheinander auf mittlerer Stufe ca. 3 Minuten von beiden Seiten goldbraun braten. Auf
+            Küchenpapier legen und abtropfen lassen. So weiter verfahren, bis alle Auberginenscheiben angebraten sind.
+            <br>
+            Mozzarella abtropfen lassen und in dünne Scheiben schneiden. Den Parmesan fein reiben. Basilikum waschen,
+            abtropfen lassen, die Blätter abzupfen und in feine Streifen schneiden.
+            <br>
+            Backofen auf 200 Grad Ober-/ Unterhitze (Umluft: 180 Grad) vorheizen.
+            <br>
+            Eine eckige Auflaufform (ca. 20 x 30 cm) mit übrigem Knoblauch ausreiben, mit einem Pinsel mit Olivenöl
+            bestreichen und 3 EL Tomatensoße in der Auflaufform verteilen. Etwa 1/3 der Auberginenscheiben
+            dachziegelartig in die Auflaufform schichten und 1/4 des Mozzarellas darüber zupfen. Gleichmäßig mit 1 EL
+            Basilikum sowie 1/4 des Parmesans bestreuen und mit 1/3 Tomatensoße bedecken.
+            <br>
+            Zwei weitere Schichten wie oben beschrieben darüber schichten, mit dem restlichen Käse abschließen und im
+            vorgeheizten Ofen 30-35 Minuten goldbraun backen.
+        </p>
+    </section>
+
+    <!-- Sektion 4 - Rezept erstellt von -->
+    <section>
+        <h3>Rezept erstellt von</h3>
+        <div class="creator">
+            <img class="creator_img" src="./img/profile_tizian.jpeg" alt="Bild von dem Ersteller Tizian">
+            <p>Tizian</p>
+        </div>
+    </section>
+    </div>
+
+    <footer>
+        <div class="limits footer_content">
+            <img class="footer_logo" src="./img/logo_white.png" alt="Logo Kochwelt">
+            
+            <ul>
+                <li> 
+                    Fotos von: <br>
+                    <a href="https://pixabay.com/users/michwich-36808266/" target="_blank">Mich Wich</a>
+                    - <a href="https://pixabay.com/de/users/romjanaly-19799828/" target="_blank">Romjan Aly</a> <br>
+                    <a href="https://pixabay.com/de/users/moiranazzari-7402443/" target="_blank">Moira Nazzari</a>
+                    - <a href="https://pixabay.com/de/users/topi_pigula-4759077/" target="_blank">Topi Pigula</a>
+                </li>
+                
+                <li>© 2025 Kochwelt</li>
+            </ul>
+
+            <div class="footer_icons">            
+                <a href="https://de-de.facebook.com/" target="_blank"><img src="./img/icons/facebook.svg" alt="facebook-icon"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="./img/icons/instagram.svg" alt="instagram-icon"></a>
+                <a href="https://x.com/" target="_blank"><img src="./img/icons/x.svg" alt="x-icon"></a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+
+</html>

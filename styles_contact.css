@@ -1,0 +1,89 @@
+/* Kontaktseite */
+
+.section_centered{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 100vw; */
+  height: 90vh;
+  padding: 24px 24px;
+}
+
+.contact_grey_box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+
+  max-width: 450px;
+
+  background-color: lightgrey;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.contact_grey_box p{
+  margin: 0px 0px 16px 0px;
+  text-align: justify;
+}  
+
+.checked_false{
+  color: red;
+}
+
+.flex_box{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+}
+
+.flex_box h1{
+  margin: 0px 0px 32px 0px;
+  text-align: start;
+}
+
+.flex_box p{
+  font-size: 16px;
+  margin: 0px;
+}
+
+.flex_box input{
+  margin-bottom: 32px;
+  border-style: none;
+  border-radius: 8px;
+  padding: 8px;
+
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+}
+
+.flex_box textarea{
+  margin-bottom: 32px;
+  border-style: none;
+  border-radius: 8px;
+  padding: 8px;
+  
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+}
+
+@media (max-width: 690px){
+  .contact_grey_box{
+    max-width: 350px;
+  }
+
+  .contact_grey_box p{
+    margin-bottom: 24px;
+  } 
+}
+
+@media (max-width: 480px) {
+  .contact_grey_box{
+    max-width: 230px;
+  }
+
+  .contact_grey_box p{
+    margin-bottom: 24px;
+  }
+}

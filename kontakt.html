@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kochwelt | Kontakt</title>
+
+    <link rel="icon" href="./img/logo_small.png">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles_contact.css">
+</head>
+
+<body>
+    <div class="global_layout_vertical">
+        <header>
+            <div class="limits flexbox_limits">
+                <div class="header_icon">
+                    <a href="index.html">
+                        <img src="./img/logo.png" alt="Logo Kochwelt" />
+                    </a>
+                </div>
+                <nav>
+                    <a href="./index.html">Start</a>
+                    <a href="./rotd.html">Rezept des Tages</a>
+                    <a href="./kontakt.html" class="nav_focus">Kontakt</a>
+                    <a href="./impressum.html">Impressum</a>
+                </nav>
+                <div id="resp_button" onclick="toggleRespMenu()">
+                    <span class="burger_line_one"></span>
+                    <span class="burger_line_two"></span>
+                    <span class="burger_line_three"></span>
+                </div>
+            </div>
+        </header>
+        <div id="resp_menu" class="resp_menu_box resp_menu_closed">
+            <a href="./index.html">Start</a>
+            <a href="./rotd.html">Rezept des Tages</a>
+            <a href="./kontakt.html">Kontakt</a>
+            <a href="./impressum.html">Impressum</a>
+        </div>
+
+        <section class="section_centered">
+            <form class="contact_grey_box" action="https://formspree.io/f/xzzroezq" method="post" id="form">    
+                <div class="flex_box">
+                    <h1>Kontaktiere uns</h1>
+                    
+                    <label for="name">Dein Name:</label>
+                    <input id="name" class="" type="text" required minlength="2" maxlength="30">
+                    
+                    <label for="email">Deine E-Mail:</label>
+                    <input id="email" type="email" required required minlength="2" maxlength="30"> 
+                    
+                    <label for="message">Deine Nachricht:</label>
+                    <textarea name="Eingabefeld für deine Nachricht" id="message" rows="10" maxlength="500" required></textarea>
+                </div>
+
+                <button type="submit">Abschicken</button>
+                
+            </from>
+        </section>
+
+        <footer>
+            <div class="limits footer_content">
+                <img class="footer_logo" src="./img/logo_white.png" alt="Logo Kochwelt">
+                
+                <ul>
+                    <li> 
+                        Fotos von: <br>
+                        <a href="https://pixabay.com/users/michwich-36808266/" target="_blank">Mich Wich</a>
+                        - <a href="https://pixabay.com/de/users/romjanaly-19799828/" target="_blank">Romjan Aly</a> <br>
+                        <a href="https://pixabay.com/de/users/moiranazzari-7402443/" target="_blank">Moira Nazzari</a>
+                        - <a href="https://pixabay.com/de/users/topi_pigula-4759077/" target="_blank">Topi Pigula</a>
+                    </li>
+                    
+                    <li>© 2025 Kochwelt</li>
+                </ul>
+    
+                <div class="footer_icons">            
+                    <a href="https://de-de.facebook.com/" target="_blank"><img src="./img/icons/facebook.svg" alt="facebook-icon"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="./img/icons/instagram.svg" alt="instagram-icon"></a>
+                    <a href="https://x.com/" target="_blank"><img src="./img/icons/x.svg" alt="x-icon"></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>

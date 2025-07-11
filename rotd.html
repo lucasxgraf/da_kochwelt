@@ -1,0 +1,191 @@
+<!-- Recipe of the day -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kochwelt | Rezept des Tages</title>
+
+    <link rel="icon" href="./img/logo_small.png">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles_recipe.css">
+</head>
+<body>
+    <div class="global_layout_vertical">
+        <header>
+            <div class="limits flexbox_limits">
+                <div class="header_icon">
+                    <a href="index.html">
+                        <img src="./img/logo.png" alt="Logo Kochwelt" />
+                    </a>
+                </div>
+                <nav>
+                    <a href="./index.html">Start</a>
+                    <a href="./rotd.html" class="nav_focus">Rezept des Tages</a>
+                    <a href="./kontakt.html">Kontakt</a>
+                    <a href="./impressum.html">Impressum</a>
+                </nav>
+               <div id="resp_button" onclick="toggleRespMenu()">
+                    <span class="burger_line_one"></span>
+                    <span class="burger_line_two"></span>
+                    <span class="burger_line_three"></span>
+                </div>
+            </div>
+        </header>
+        <div id="resp_menu" class="resp_menu_box resp_menu_closed">
+            <a href="./index.html">Start</a>
+            <a href="./rotd.html">Rezept des Tages</a>
+            <a href="./kontakt.html">Kontakt</a>
+            <a href="./impressum.html">Impressum</a>
+        </div>
+
+    <div class="limits flexbox_limits_column">
+        <!-- Sektion 1 - Überschrift, Bild, Kurze Infozeile -->
+        <section>
+            <h1 class="text_align_left recipe_h1">Griechischer Bauernsalat</h1>
+            <img class="recipe_img" src="./img/salad.jpg" alt="">
+            <div class="recipe_info">
+                <div class="recipe_info_box">
+                    <img src="./img/icons/clock-regular.svg" alt="">
+                    <span>15 Min</span>
+                </div>
+                <div class="recipe_info_box">
+                    <img src="./img/icons/brain-solid.svg" alt="">
+                    <span>Simpel</span>
+                </div>            
+                <div class="recipe_info_box">
+                    <img src="./img/icons/calendar-alt-regular.svg" alt="">
+                    <span>17.05.2025</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sektion 2 - Portionen, Zutaten -->
+        <section>
+            <div class="separator"></div>
+            <div class="hidden_container">
+                <div id="warning" class="notice"></div>
+            </div>
+            <div class="number_of_portions">
+                <p>Zutaten für</p>
+                <div class="portion_inputs">
+                    <input id="portions_value" type="number" value="4" min="1" max="20">
+                    <button onclick="getAmountIngredients()">Portionen</button>  
+                </div>
+            </div>
+            <p id="validate_portions"></p>  
+
+            <table class="recipe_table">
+                <tr class="recipe_table_color">
+                    <td>1</td>
+                    <td class="d_none"></td>
+                    <td class="small_space">Salatgurke (n)</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="d_none"></td>
+                    <td class="small_space">Paprika (s), rot und grün</td>
+                </tr>
+                <tr class="recipe_table_color">
+                    <td>50</td>
+                    <td>g</td>
+                    <td class="small_space">Tomate (n)</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="d_none"></td>
+                    <td class="small_space">Zwiebeln</td>
+                </tr>
+                <tr class="recipe_table_color">
+                    <td>200</td>
+                    <td>g</td>
+                    <td>Schafskäse (n)</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Glas</td>
+                    <td>Oliven, schwarze, ca. 100g</td>
+                </tr>
+                <tr class="recipe_table_color">
+                    <td class="d_none"></td>
+                    <td class="d_none"></td>
+                    <td>Salz und Pfeffer</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="d_none"></td>
+                    <td class="small_space">Zitrone (n)</td>
+                </tr>
+                <tr class="recipe_table_color">
+                    <td>125</td>
+                    <td>ml</td>
+                    <td>Olivenöl</td>
+                </tr>
+                <tr>
+                    <td class="d_none"></td>
+                    <td class="d_none"></td>
+                    <td>Oregano</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Sektion 3 - Zubereitung -->
+        <section>
+            <h2>Zubereitung</h2>
+            <div class="recipe_info">
+                <div class="recipe_info_box">
+                    <img src="./img/icons/clock-regular.svg" alt="">
+                    <div>ca. 15 Min</div>
+                </div>
+                <div class="recipe_info_box">
+                    <img src="./img/icons/clock-regular.svg" alt="">
+                    <div>Gesamtzeit ca. 15 Minuten</div>
+                </div>
+            </div>
+            <p> 
+                Gurke waschen und ungeschält in dünne Scheiben oder Stücke schneiden. 
+                Paprika waschen, entkernen und in dünne Streifen schneiden. 
+                Tomaten waschen und achteln. Zwiebeln schälen und in feine Ringe schneiden. 
+                Schafskäse würfeln und mit Oregano bestreuen. 
+                Oliven abgießen und mit Gurke, Paprika, Tomaten, Zwiebeln und Schafskäse in eine Schüssel geben. 
+                Olivenöl, Zitronensaft. Salz und Pfeffer zu einer Sauce verrühren und über den Salat gießen.
+            </p>
+        </section>
+
+        <!-- Sektion 4 - Rezept erstellt von -->
+        <section>
+            <h3>Rezept erstellt von</h3>
+            <div class="creator">
+                <img class="creator_img" src="./img/profile.png" alt="Bild von dem Ersteller">
+                <p>Anne, Lucas, Tizian</p>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="limits footer_content">
+            <img class="footer_logo" src="./img/logo_white.png" alt="Logo Kochwelt">
+            
+            <ul>
+                <li> 
+                    Fotos von: <br>
+                    <a href="https://pixabay.com/users/michwich-36808266/" target="_blank">Mich Wich</a>
+                    - <a href="https://pixabay.com/de/users/romjanaly-19799828/" target="_blank">Romjan Aly</a> <br>
+                    <a href="https://pixabay.com/de/users/moiranazzari-7402443/" target="_blank">Moira Nazzari</a>
+                    - <a href="https://pixabay.com/de/users/topi_pigula-4759077/" target="_blank">Topi Pigula</a>
+                </li>
+                
+                <li>© 2025 Kochwelt</li>
+            </ul>
+
+            <div class="footer_icons">            
+                <a href="https://de-de.facebook.com/" target="_blank"><img src="./img/icons/facebook.svg" alt="facebook-icon"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="./img/icons/instagram.svg" alt="instagram-icon"></a>
+                <a href="https://x.com/" target="_blank"><img src="./img/icons/x.svg" alt="x-icon"></a>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
